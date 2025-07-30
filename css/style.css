@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Header */
+header {
+    padding: 15px 50px;
+    background-color: rosybrown;
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+input {
+    display: none;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bolder;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 23px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    color: white;
+
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.menu ul li a::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.menu ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* banner */
+.main-banner {
+    margin-bottom: 100px;
+}
+
+.sub-banner {
+    position: relative;
+}
+
+.sub-banner img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.mobile-banner {
+    display: none;
+}
+
+.titel-banner {
+    position: absolute;
+    top: 20%;
+    left: 50px;
+}
+
+.titel-banner h1 {
+    margin-bottom: 10px;
+}
+
+.titel-banner p {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.titel-banner button {
+    border: none;
+    background-color: rosybrown;
+    padding: 10px 20px 10px 20px;
+}
+
+.titel-banner button a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* featured Products */
+.featured {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 100px;
+}
+
+.sub-featured {
+    display: flex;
+    justify-content: center;
+}
+
+.product-info {
+    position: relative;
+}
+
+.rabatt {
+    position: absolute;
+    background-color: rgb(5, 85, 37);
+    top: 0;
+    left: 0;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.featured img {
+    width: 90%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.featured h2 {
+    margin-bottom: 50px;
+}
+
+.parfum-name {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.preis {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: green;
+    font-weight: bolder;
+
+}
+
+.featured button {
+    border: none;
+    background-color: rosybrown;
+    padding: 10px 20px 10px 20px;
+    width: 90%;
+}
+
+.featured button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.featured .desc {
+    margin-bottom: 10px;
+    width: 90%;
+    color: gray;
+}
+
+/* Zwei-Products */
+.zwei-products {
+    margin-bottom: 100px;
+}
+
+.sub-zwei-products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    color: white;
+}
+
+.sub-zwei-products img {
+    width: 100%;
+    height: 300px;
+}
+
+.hilights {
+    position: relative;
+}
+
+.hilights>div {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.hilights p {
+    width: 400px;
+    margin-bottom: 12px;
+}
+
+.hilights h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+
+}
+
+.hilights button {
+    border: none;
+    background-color: rgb(65, 95, 146);
+    padding: 10px 20px 10px 20px;
+
+}
+
+.hilights a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* About the Brand */
+.brand {
+    background-color: rgba(188, 143, 143, 0.402);
+}
+
+.brand-about {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding-left: 50px;
+
+    /* margin-bottom: 100px; */
+
+}
+
+.brand-about h4 {
+    margin-bottom: 30px;
+    font-size: 23px;
+}
+
+.brand-about p {
+    width: 500px;
+}
+
+.brand-about img {
+    width: 40%;
+
+}
+
+/* Mizharia */
+.mizharia {
+    margin-bottom: 100px;
+}
+
+.sub-mizharia {
+    display: flex;
+    align-items: center;
+}
+
+.sub-mizharia>div {
+    padding-right: 50px;
+    text-align: center;
+}
+
+.mizharia img {
+    width: 60%;
+}
+
+.sub-mizharia h6 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+.sub-mizharia .para-one {
+    margin-bottom: 30px;
+    font-size: 2em;
+
+}
+
+.sub-mizharia .para-two {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.rabatt-today {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.sub-mizharia button {
+    border: none;
+    background-color: rosybrown;
+    padding: 10px 20px 10px 20px;
+    width: 90%;
+
+}
+
+.sub-mizharia button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* Services */
+.main-services {
+    color: rgb(255, 255, 255);
+    background-color: rosybrown;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 1px;
+
+}
+
+.sub-services {
+    display: flex;
+    justify-content: center;
+}
+
+.sub-services div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-services i {
+    margin-bottom: 20px;
+
+}
+
+.sub-services p {
+    text-align: center;
+}
+
+.sub-services h5 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: rosybrown;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Contact us */
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footit {
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.gps {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 300px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+
+}
+
+.email a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Policy */
+.Policy>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Policy a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Social Media */
+
+.social-media>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.social-media a {
+    line-height: 1.8;
+    font-size: 20px;
+
+}
+
+.social-media i {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.social a {
+    text-decoration: none;
+    color: white;
+}
