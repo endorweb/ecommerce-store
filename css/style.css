@@ -76,7 +76,7 @@ input {
 
 .sub-banner img {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .mobile-banner {
@@ -91,11 +91,15 @@ input {
 
 .titel-banner h1 {
     margin-bottom: 10px;
+    width: 90%;
 }
 
 .titel-banner p {
     width: 500px;
     margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1.1em;
+    color: gray;
 }
 
 .titel-banner button {
@@ -126,6 +130,8 @@ input {
 .product-info {
     position: relative;
 }
+
+
 
 .rabatt {
     position: absolute;
@@ -179,6 +185,8 @@ input {
     margin-bottom: 10px;
     width: 90%;
     color: gray;
+    line-height: 1.5;
+    font-size: 1.1em;
 }
 
 /* Zwei-Products */
@@ -256,6 +264,8 @@ input {
 
 .brand-about p {
     width: 500px;
+    line-height: 1.5;
+    font-size: 1.1em;
 }
 
 .brand-about img {
@@ -297,6 +307,8 @@ input {
 .sub-mizharia .para-two {
     color: gray;
     margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1.1em;
 }
 
 .rabatt-today {
@@ -323,7 +335,7 @@ input {
 /* Services */
 .main-services {
     color: rgb(255, 255, 255);
-    background-color: rosybrown;
+    background-color: rgba(188, 143, 143, 0.674);
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 1px;
@@ -348,6 +360,8 @@ input {
 
 .sub-services p {
     text-align: center;
+    line-height: 1.5;
+    font-size: 1.1em;
 }
 
 .sub-services h5 {
@@ -379,7 +393,7 @@ footer {
 
 .footit {
     margin-bottom: 30px;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .gps {
@@ -387,6 +401,7 @@ footer {
     align-items: center;
     gap: 12px;
     width: 300px;
+    line-height: 1.5;
 }
 
 .phone {

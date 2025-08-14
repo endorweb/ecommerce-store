@@ -73,11 +73,12 @@
         margin-bottom: 15px;
     }
 
-    .menu a {
+    .menu ul li a {
         text-decoration: none;
         padding: 10px;
         display: block;
         border-bottom: 1px solid #eee;
+        font-size: 1.3em;
     }
 
     .menu-toggle:checked~.menu {
@@ -136,8 +137,9 @@
     .titel-banner p {
         width: 400px;
         margin-bottom: 20px;
-        font-size: 2em;
+        font-size: 1.3em;
         padding: 0 5% 0 5%;
+        color: gray;
 
     }
 
@@ -152,7 +154,7 @@
         color: white;
         font-size: 18px;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* Featured Products */
@@ -162,7 +164,9 @@
     }
 
     .featured h2 {
-        font-size: 2em;
+        font-size: 1.6em;
+        margin: 0 20px 0 20px;
+        margin-bottom: 30px;
     }
 
     .sub-featured {
@@ -178,18 +182,12 @@
         margin-bottom: 20px;
     }
 
-    .featured h2 {
-        font-size: 1.6em;
-        margin: 0 20px 0 20px;
-        margin-bottom: 30px;
-    }
-
     .rabatt {
         font-size: 2em;
     }
 
     .product-info>div {
-        font-size: 1.5em;
+        font-size: 1.3em;
         text-align: center;
 
         display: flex;
@@ -212,7 +210,7 @@
     }
 
     .featured button a {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* zwei products */
@@ -228,7 +226,7 @@
 
     .hilights h3 {
         width: 250px;
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .hilights p {
@@ -236,7 +234,7 @@
     }
 
     .hilights>div>button>a {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* About-The-Brand */
@@ -264,14 +262,13 @@
 
     .brand-about>div>p {
         text-align: center;
-        padding: 0 8% 0 8%;
+        padding: 0 15% 0 15%;
         width: 450px;
-        font-size: 2em;
+        font-size: 1.3em;
     }
 
     .brand-about img {
         width: 100%;
-
     }
 
     /* Mizharia */
@@ -288,7 +285,8 @@
     }
 
     .sub-mizharia>div>p {
-        font-size: 2em;
+        font-size: 1.3em;
+        line-height: 1.5;
 
 
     }
@@ -310,14 +308,15 @@
         justify-content: center;
     }
 
-    .sub-services>div>div>p {
-        text-align: center;
-        width: 300px;
-        font-size: 1.5em;
+    .sub-mizharia .para-two {
+        color: gray;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-size: 1.3em;
     }
 
     .sub-services h5 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* Footer */
@@ -328,11 +327,11 @@
         padding-left: 30px;
         padding-right: 30px;
 
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .phone p {
-        font-size: 2em;
+        font-size: 1.3em;
 
     }
 
@@ -345,7 +344,8 @@
     }
 
     .social i {
-        font-size: 1.5em;
+        font-size: 1.3em;
+        margin-right: 10px;
     }
 
     .social>a {
@@ -456,12 +456,12 @@
         margin-bottom: 15px;
     }
 
-    .menu a {
+    .menu ul li a {
         text-decoration: none;
         padding: 10px;
         display: block;
         border-bottom: 1px solid #eee;
-        font-size: 2em;
+        font-size: 1.3em;
     }
 
     .menu-toggle:checked~.menu {
@@ -508,8 +508,8 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        font-size: 2em;
-        padding: 0 20px 0 20px;
+        font-size: 1.3em;
+        /* padding: 0 20px 0 20px; */
     }
 
     .titel-banner h1 {
@@ -521,6 +521,8 @@
     .titel-banner p {
         width: 450px;
         margin-bottom: 20px;
+        font-size: 1.3em;
+        color: gray;
     }
 
     .titel-banner button {
@@ -535,7 +537,7 @@
         color: white;
         font-size: 18px;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* Featured Products */
@@ -559,7 +561,7 @@
     }
 
     .featured h2 {
-        font-size: 1.7em;
+        font-size: 1.5em;
         margin: 0 20px 0 20px;
         margin-bottom: 30px;
     }
@@ -573,7 +575,7 @@
     }
 
     .product-info>div {
-        font-size: 1.5em;
+        font-size: 1.3em;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -595,7 +597,7 @@
     }
 
     .featured button a {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* zwei products */
@@ -668,6 +670,10 @@
         gap: 50px;
     }
 
+    .sub-mizharia .para-one {
+        font-size: 1.3em;
+    }
+
     .sub-mizharia>div {
         text-align: center;
         padding: 0 20px 0 20px;
@@ -679,7 +685,7 @@
     }
 
     .sub-mizharia button a {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* services */
@@ -716,23 +722,23 @@
     }
 
     .phone p {
-        font-size: 1.7em;
+        font-size: 1.3em;
 
     }
 
     .email a {
-        font-size: 1.7em;
+        font-size: 1.3em;
     }
 
     .Policy>div>a {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .social i {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .social>a {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 }

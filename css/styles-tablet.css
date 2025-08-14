@@ -67,11 +67,12 @@
         margin-bottom: 15px;
     }
 
-    .menu a {
+    .menu ul li a {
         text-decoration: none;
         padding: 10px;
         display: block;
         border-bottom: 1px solid #eee;
+        font-size: 1.3em;
     }
 
     .menu-toggle:checked~.menu {
@@ -94,7 +95,7 @@
     /* banner */
     .titel-banner {
         position: static;
-        font-size: 1.5em;
+        font-size: 1.3em;
         padding: 0 50px 0 50px;
     }
 
@@ -118,6 +119,18 @@
         margin-bottom: 20px;
     }
 
+    .parfum-name {
+        font-size: 1.5em
+    }
+
+    .product-info>div {
+        font-size: 1.3em;
+    }
+
+    .preis {
+        font-size: 1.5em;
+    }
+
     /* zwei products */
 
     .sub-zwei-products {
@@ -131,6 +144,7 @@
 
     .hilights h3 {
         font-size: 1.8rem;
+        width: 80%;
     }
 
     .sub-zwei-products img {
@@ -138,18 +152,18 @@
     }
 
     .sub-zwei-products a {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     /* About-The-Brand  */
     .brand-about {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         gap: 100px;
         padding-left: 50px;
         padding-right: 50px;
-        font-size: 1rem;
 
     }
 
@@ -158,10 +172,10 @@
         margin-bottom: 8px;
     }
 
-    .brand-about p {
-        width: 350px;
-        padding-right: 50px;
-
+    .brand-about>div>p {
+        width: 100%;
+        font-size: 1.3em;
+        line-height: 1.2;
     }
 
     /* Mizharia */
@@ -179,12 +193,12 @@
     .sub-mizharia>div {
         margin-top: 20px;
         padding: 0 50px 0 50px;
-        font-size: 1.5rem;
+        font-size: 1.3em;
 
     }
 
     .sub-mizharia>div>button>a {
-        font-size: 1.8rem;
+        font-size: 1.3em;
     }
 
 
@@ -199,6 +213,6 @@
 
     .sub-services p {
         width: 350px;
-        font-size: 1.5rem;
+        font-size: 1.3em;
     }
 }
