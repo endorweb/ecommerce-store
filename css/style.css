@@ -11,14 +11,15 @@
 header {
     padding: 15px 50px;
     background-color: rosybrown;
-
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
 body {
-    /* overflow: hidden; */
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 input {
@@ -134,8 +135,6 @@ input {
 .product-info {
     position: relative;
 }
-
-
 
 .rabatt {
     position: absolute;
@@ -349,6 +348,8 @@ input {
 .sub-services {
     display: flex;
     justify-content: center;
+    gap: 10px;
+
 }
 
 .sub-services div {
