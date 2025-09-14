@@ -12,6 +12,7 @@ header {
     padding: 15px 50px;
     background-color: rosybrown;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -20,6 +21,7 @@ body {
     overflow-x: hidden;
     margin: 0 !important;
     padding: 0 !important;
+    width: 100%;
 }
 
 input {
