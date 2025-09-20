@@ -2,60 +2,72 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-/* Header */
-header {
-    padding: 15px 50px;
-    background-color: rosybrown;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
+html,
 body {
-    overflow-x: hidden;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
+    /* height: 500vh; */
+    /* overflow-x: hidden; */
+}
+
+
+
+/* header */
+.mini-header {
+    padding: 8px 30px;
+    background-color: black;
+}
+
+.mini-header>p>a {
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.mini-header>p {
+    line-height: 1.5;
 }
 
 input {
     display: none;
 }
 
-.logo {
-    font-size: 23px;
-    font-weight: bolder;
-    color: white;
+.main-header {
+    background-color: rosybrown;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 1.1em;
 }
 
-.header {
+.sub-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu ul li {
-    display: inline-block;
-    margin-right: 23px;
+.sub-header>.logo {
+    font-size: 25px;
+    color: white;
 }
 
-.menu ul li a {
+.menu>ul>li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.menu>ul>li>a {
     text-decoration: none;
-    color: black;
     font-size: 20px;
     color: white;
 
     position: relative;
-    padding-bottom: 3px;
+    padding-bottom: 5px;
 }
 
-.menu ul li a::after {
+.menu>ul>li>a::after {
     position: absolute;
     content: "";
     bottom: 0;
@@ -72,399 +84,366 @@ input {
     transform: scaleX(1);
 }
 
-/* banner */
-.main-banner {
+/* main > Banner */
+.banner {
     margin-bottom: 100px;
 }
 
-.sub-banner {
-    position: relative;
-}
-
-.sub-banner img {
-    width: 100%;
-    margin-top: 40px;
-}
-
-.mobile-banner {
+.mobille-image {
     display: none;
 }
 
-.titel-banner {
+.banner-image {
+    position: relative;
+}
+
+.banner-image>img {
+    width: 100%;
+}
+
+.banner-image-titel {
     position: absolute;
-    top: 20%;
-    left: 50px;
-}
-
-.titel-banner h1 {
-    margin-bottom: 10px;
-    width: 90%;
-}
-
-.titel-banner p {
-    width: 500px;
-    margin-bottom: 20px;
+    top: 40px;
+    left: 0;
+    padding: 0 30px;
+    width: 60%;
     line-height: 1.5;
     font-size: 1.1em;
+}
+
+.banner-image-titel>.para-banner {
     color: gray;
 }
 
-.titel-banner button {
+.para-banner>button {
+    margin-top: 20px;
     border: none;
+    padding: 8px 13px;
     background-color: rosybrown;
-    padding: 10px 20px 10px 20px;
-}
-
-.titel-banner button a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
     font-weight: bold;
 }
 
-/* featured Products */
-.featured {
-    padding-left: 50px;
-    padding-right: 50px;
+.para-banner>button>a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* Featured Products */
+.main-featured {
+    padding: 0 30px;
     margin-bottom: 100px;
+}
+
+.main-featured>h2 {
+    margin-bottom: 30px;
 }
 
 .sub-featured {
     display: flex;
-    justify-content: center;
+    gap: 30px;
 }
 
-.product-info {
+.product {
     position: relative;
 }
 
 .rabatt {
     position: absolute;
-    background-color: rgb(5, 85, 37);
     top: 0;
     left: 0;
-    padding: 5px;
-    color: white;
+    background-color: yellow;
+    padding: 3px 8px;
+    font-size: 1.2em;
     font-weight: bold;
+    display: block;
+    display: inline-block;
 }
 
-.featured img {
-    width: 90%;
-    height: 200px;
-    margin-bottom: 20px;
+.product>img {
+    width: 100%;
+    height: 210px;
+    margin-bottom: 10px;
 }
 
-.featured h2 {
-    margin-bottom: 50px;
+.product-info {
+    line-height: 1.5;
+    font-size: 1.1em;
 }
 
-.parfum-name {
-    font-size: 23px;
-    font-weight: bold;
+.product-info>h3 {
     margin-bottom: 10px;
 }
 
 .preis {
-    margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 1.2em;
+    font-weight: bold;
     color: green;
-    font-weight: bolder;
-
 }
 
-.featured button {
+.product-info>p:nth-child(4) {
+    color: gray;
+}
+
+.product-info>button {
+    margin-top: 18px;
     border: none;
     background-color: rosybrown;
-    padding: 10px 20px 10px 20px;
-    width: 90%;
+    padding: 8px 10px;
 }
 
-.featured button a {
+.product-info>button>a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 18px;
 }
 
-.featured .desc {
-    margin-bottom: 10px;
-    width: 90%;
-    color: gray;
-    line-height: 1.5;
-    font-size: 1.1em;
-}
-
-/* Zwei-Products */
-.zwei-products {
+/* Zwei-Cards */
+.zwei-cards {
+    padding: 0 30px;
     margin-bottom: 100px;
 }
 
-.sub-zwei-products {
+.sub-zwei-cards {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 20px;
-
-    color: white;
-}
-
-.sub-zwei-products img {
-    width: 100%;
-    height: 300px;
-}
-
-.hilights {
     position: relative;
 }
 
-.hilights>div {
+.card>img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.card {
+    position: relative;
+}
+
+.card-one {
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 7%;
+    left: 7%;
+    color: white;
+    line-height: 1.5;
 }
 
-.hilights p {
-    width: 400px;
-    margin-bottom: 12px;
+.card-one>p:nth-child(1) {
+    margin-bottom: 15px;
 }
 
-.hilights h3 {
-    margin-bottom: 12px;
-    font-size: 22px;
-
+.card-one>h2 {
+    margin-bottom: 10px;
 }
 
-.hilights button {
+.card-two {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    color: white;
+    line-height: 1.5;
+}
+
+.card-two>p:nth-child(1) {
+    margin-bottom: 15px;
+}
+
+.card-two>h2 {
+    margin-bottom: 10px;
+}
+
+.card>div>button {
     border: none;
-    background-color: rgb(65, 95, 146);
-    padding: 10px 20px 10px 20px;
-
+    background-color: rgb(65, 51, 138);
+    padding: 8px 10px;
 }
 
-.hilights a {
+.card>div>button>a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 18px;
 }
 
-/* About the Brand */
-.brand {
-    background-color: rgba(188, 143, 143, 0.402);
+/* About The Brand */
+.about {
+    padding: 0 30px;
+    background-color: rgb(225, 195, 151);
 }
 
-.brand-about {
+.sub-about {
     display: flex;
+    text-align: start;
     align-items: center;
-    gap: 100px;
-    padding-left: 50px;
-
-    /* margin-bottom: 100px; */
-
-}
-
-.brand-about h4 {
-    margin-bottom: 30px;
-    font-size: 23px;
-}
-
-.brand-about p {
-    width: 500px;
+    gap: 120px;
     line-height: 1.5;
+}
+
+.sub-about>img {
+    width: 30%;
+}
+
+.sub-about>div>p {
+    width: 80%;
     font-size: 1.1em;
 }
 
-.brand-about img {
-    width: 40%;
-
+.sub-about>div>p:nth-child(1) {
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
-/* Mizharia */
-.mizharia {
-    margin-bottom: 100px;
+/* 10% Off */
+.main-off {
+    margin-bottom: 150px;
 }
 
-.sub-mizharia {
-    display: flex;
-    align-items: center;
-}
-
-.sub-mizharia>div {
-    padding-right: 50px;
-    text-align: center;
-}
-
-.mizharia img {
+.sub-off>img {
     width: 60%;
 }
 
-.sub-mizharia h6 {
+.sub-off {
+    display: flex;
+    align-items: center;
+}
+
+.sub-off>div {
+    margin-right: 30px;
+    width: 50%;
+    text-align: center;
+}
+
+strong {
     font-size: 1.3em;
-    margin-bottom: 15px;
-    color: gray;
 }
 
-.sub-mizharia .para-one {
+.sub-off>div>h2 {
+    margin: 30px 0px;
+    line-height: 1.5;
+}
+
+.sub-off>div>p {
     margin-bottom: 30px;
-    font-size: 2em;
-
-}
-
-.sub-mizharia .para-two {
-    color: gray;
-    margin-bottom: 20px;
     line-height: 1.5;
     font-size: 1.1em;
 }
 
-.rabatt-today {
-    font-size: 50px;
-    margin-bottom: 30px;
+.sub-off>div>.off {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.sub-mizharia button {
+.sub-off>div>a>button {
     border: none;
-    background-color: rosybrown;
-    padding: 10px 20px 10px 20px;
-    width: 90%;
-
-}
-
-.sub-mizharia button a {
-    text-decoration: none;
+    background-color: rgb(65, 51, 138);
+    padding: 8px 20px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    cursor: pointer;
 }
-
 
 /* Services */
 .main-services {
-    color: rgb(255, 255, 255);
-    background-color: rgba(188, 143, 143, 0.674);
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 1px;
-
+    padding: 30px 30px;
+    background-color: rgba(188, 143, 143, 0.685);
+    color: white;
 }
 
 .sub-services {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-
-}
-
-.sub-services div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sub-services i {
-    margin-bottom: 20px;
-
-}
-
-.sub-services p {
+    gap: 30px;
     text-align: center;
     line-height: 1.5;
     font-size: 1.1em;
 }
 
-.sub-services h5 {
-    font-size: 23px;
-    margin-bottom: 15px;
+.services-info>i {
+    margin-bottom: 30px;
+}
+
+.services-info>div>p {
+    margin-top: 30px;
 }
 
 /* Footer */
-footer {
-    background-color: rosybrown;
-    color: white;
-    padding-top: 50px;
-    padding-bottom: 30px;
+.main-footer {
+    padding: 50px 30px 10px;
+    background-color: rgb(188, 143, 143);
 }
 
-.footer {
+.sub-footer {
     display: flex;
     justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
 }
 
-/* Contact us */
-.contact {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.footit {
+/* Footer > Contact-us */
+.contact-us>h3 {
     margin-bottom: 30px;
-    font-size: 1.5em;
+    font-size: 25px;
 }
 
-.gps {
+.location {
     display: flex;
     align-items: center;
-    gap: 12px;
-    width: 300px;
+    gap: 10px;
     line-height: 1.5;
+    font-size: 1.1em;
+    margin-bottom: 30px;
 }
 
-.phone {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
+
+/* Footer > Policy */
+.main-policy {}
+
+.main-policy>h3 {
+    margin-bottom: 30px;
+    font-size: 25px;
 }
 
-.email {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
-
-}
-
-.email a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Policy */
-.Policy>div {
+.main-policy>.policy {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
 }
 
-.Policy a {
+.policy>a {
     text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+}
+
+.policy>a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Footer > Social-Media */
+.main-media>h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.media {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.media>div>a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+}
+
+.media>div>a:hover {
     color: white;
 }
 
-
-/* Social Media */
-
-.social-media>div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
+.media>a>i {
+    font-size: 25px;
+    color: black;
 }
 
-.social-media a {
-    line-height: 1.8;
-    font-size: 20px;
-
-}
-
-.social-media i {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-}
-
-.social a {
-    text-decoration: none;
+.media>a>i:hover {
     color: white;
 }

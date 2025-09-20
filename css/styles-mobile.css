@@ -1,89 +1,65 @@
 /********************************************** Very small mobile device (up to 480px) *********************************************/
 @media (max-width: 480px) {
-
-    body,
-    html {
-        width: 100%;
-        overflow-x: hidden;
-        /* يمنع ظهور شريط التمرير الأفقي */
+    body {
+        /* overflow-x: hidden;
         margin: 0 !important;
-        padding: 0 !important;
-        max-width: 100%;
-        box-sizing: border-box;
+        padding: 0 !important; */
     }
 
-    /* Header > menu */
-    .logo {
-        font-size: 1.8em;
-    }
-
+    /* header */
     .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        position: sticky;
         width: 30px;
         height: 21px;
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        right: 50px;
+        right: 30px;
+        top: 60px;
         z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        cursor: pointer;
     }
 
     .hamburger span {
-        display: block;
         height: 3px;
         width: 100%;
-        background: #333;
-        transition: all 0.3s ease;
-    }
+        background-color: rgb(255, 255, 255);
+        display: block;
+        transition: all 0.5s ease;
 
-    .hamburger span {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background: #333;
-        transition: all 0.3s ease;
     }
 
     .menu {
         position: fixed;
-        top: 0;
         right: -100%;
+        background-color: rosybrown;
+        height: 100vh;
         width: 80%;
         max-width: 300px;
-        height: 100vh;
-        background-color: rosybrown;
-        z-index: 999;
+        top: 0;
+        padding: 100px 20px;
         transition: all 0.5s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        padding: 80px 20px 20px;
+        z-index: 999;
     }
 
-    .menu ul {
-        list-style: none;
+    .menu>ul>li {
+        margin-bottom: 30px;
+    }
+
+    .menu>ul {
         margin: 0;
         padding: 0;
-
-        display: flex;
-        flex-direction: column;
     }
 
-    .menu li {
-        margin-bottom: 15px;
-    }
-
-    .menu ul li a {
-        text-decoration: none;
+    .menu>ul>li>a {
+        border-bottom: 1px solid #eee;
         padding: 10px;
         display: block;
-        border-bottom: 1px solid #eee;
         font-size: 1.3em;
     }
 
     .menu-toggle:checked~.menu {
         right: 0;
-
     }
 
     .menu-toggle:checked+.hamburger span:nth-child(1) {
@@ -91,650 +67,515 @@
     }
 
     .menu-toggle:checked+.hamburger span:nth-child(2) {
-        display: none;
+        opacity: 0;
     }
 
     .menu-toggle:checked+.hamburger span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    /* banner */
-    .main-banner {
-        margin-bottom: 100px;
-    }
-
-    .sub-banner>.mobile-banner {
-        margin-bottom: 100px;
-        margin-top: 50px;
-    }
-
-    .img-banner {
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.326);
         display: none;
+        z-index: 998;
     }
 
-    .mobile-banner {
+    .menu-toggle:checked~.overlay {
         display: block;
     }
 
+    /* main > Banner */
+    .image-banner {
+        display: none;
+    }
 
-    .titel-banner {
+    .mobille-image {
+        display: block;
+    }
+
+    .banner-image-titel {
         position: static;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
-        padding: 30px;
-    }
-
-    .titel-banner h1 {
-        margin-bottom: 30px;
-        font-size: 1.3em;
-    }
-
-    .titel-banner p {
-        margin-bottom: 20px;
-        font-size: 1.2em;
-        color: gray;
         width: 100%;
+        font-size: 1.2em;
+        margin-top: 30px;
 
     }
 
-    .titel-banner button {
-        border: none;
-        background-color: rosybrown;
-        padding: 10px 20px 10px 20px;
-    }
-
-    .titel-banner>button>a {
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        font-size: 1.5em;
+    .banner-image-titel>button {
+        font-size: 1.3em;
     }
 
     /* Featured Products */
-    .featured {
-        /* all: revert; */
-        margin-bottom: 250px;
-    }
-
-    .featured h2 {
-        font-size: 1.6em;
-        margin: 0 20px 0 20px;
-        margin-bottom: 30px;
-    }
-
     .sub-featured {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 20px 0 20px;
-        gap: 3%;
-    }
-
-    .featured img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .rabatt {
-        font-size: 1.5em;
-    }
-
-    .product-info>div {
-        font-size: 1.3em;
-        text-align: center;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .product-info>div>p {
-        font-size: 1.3em;
-        text-align: center;
-    }
-
-    .preis {
-        font-size: 1.3em;
-    }
-
-    .featured button {
-        margin-top: 20px
-    }
-
-    .featured button a {
-        font-size: 1.3em;
-    }
-
-    /* zwei products */
-    .sub-zwei-products {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 0 20px 0 20px;
-
-    }
-
-
-    .hilights h3 {
-        width: 60%;
-        font-size: 1.6em;
-    }
-
-    .hilights p {
-        font-size: 2em;
-    }
-
-    .hilights>div>button>a {
-        font-size: 1.5em;
-    }
-
-    /* About-The-Brand */
-    .brand {
-        /* all: revert; */
-        background-color: antiquewhite;
-        padding-bottom: 50px;
-    }
-
-    .brand-about {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        padding-left: 0;
-
-    }
-
-    .brand-about h4 {
-        margin-bottom: 30px;
-        font-size: 23px;
-        text-align: center;
-        font-size: 2em;
-    }
-
-    .brand-about>div>p {
-        text-align: center;
-        padding: 0 15% 0 15%;
-        /* width: 450px; */
-        font-size: 1.3em;
-        width: 100%;
-    }
-
-    .brand-about img {
-        width: 100%;
-    }
-
-    /* Mizharia */
-    .sub-mizharia {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .sub-mizharia>div {
-        text-align: center;
-        padding: 0 5% 0 5%;
-
-    }
-
-    .sub-mizharia>div>p {
-        font-size: 1.3em;
-        line-height: 1.5;
-    }
-
-    .sub-mizharia .para-two {
-        color: gray;
-        margin-bottom: 20px;
-        line-height: 1.5;
-        font-size: 1.3em;
-    }
-
-    .mizharia img {
-        width: 100%;
-    }
-
-    .sub-mizharia button a {
-        font-size: 1.5em;
-    }
-
-    /* services */
-    .sub-services {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        justify-content: center;
     }
 
-    .sub-services h5 {
-        font-size: 1.5em;
-    }
-
-    .services-info {
-        padding: 0 30px;
-    }
-
-    /* Footer */
-    .footer {
-        display: flex;
-        flex-direction: column;
-        gap: 15%;
-        padding-left: 10%;
-        padding-right: 10%;
-        font-size: 1.3em;
-    }
-
-    .phone p {
-        font-size: 1.3em;
-
-    }
-
-    .email a {
-        font-size: 1.5em;
-    }
-
-    .Policy>div>a {
-        font-size: 1.5em;
-    }
-
-    .social i {
-        font-size: 1.3em;
-        margin-right: 10px;
-    }
-
-    .social>a {
-        font-size: 1.3em;
-    }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/********************************************** Medium mobile device (481px to 767px) **************************************/
-@media (min-width: 481px) and (max-width: 767px) {
-
-    body,
-    html {
-        width: 100%;
-        overflow-x: hidden;
-        /* يمنع ظهور شريط التمرير الأفقي */
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Header > menu */
-    .logo {
-        font-size: 1.8em;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        right: 50px;
-        z-index: 1000;
-    }
-
-    .hamburger span {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background: #333;
-        transition: all 0.3s ease;
-    }
-
-    .hamburger span {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background: #333;
-        transition: all 0.3s ease;
-    }
-
-
-    .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: 100vh;
-        background-color: rosybrown;
-        z-index: 999;
-        transition: all 0.5s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        padding: 80px 20px 20px;
-
-    }
-
-    .menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu li {
-        margin-bottom: 15px;
-    }
-
-    .menu ul li a {
-        text-decoration: none;
-        padding: 10px;
-        display: block;
-        border-bottom: 1px solid #eee;
-        font-size: 1.3em;
-    }
-
-    .menu-toggle:checked~.menu {
-        right: 0;
-
-    }
-
-    .menu-toggle:checked+.hamburger span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    .menu-toggle:checked+.hamburger span:nth-child(2) {
-        display: none;
-    }
-
-    .menu-toggle:checked+.hamburger span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* banner */
-    .main-banner {
-        margin-bottom: 100px;
-    }
-
-
-    .sub-banner img {
-        margin-bottom: 100px;
-        margin-top: 50px;
-    }
-
-    .img-banner {
-        display: none;
-    }
-
-    .mobile-banner {
-        display: block;
-    }
-
-
-    .titel-banner {
-        position: static;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .product {
         text-align: center;
-        font-size: 1.3em;
-        /* padding: 0 20px 0 20px; */
     }
 
-    .titel-banner h1 {
-        margin-bottom: 30px;
-        width: 350px;
-
-    }
-
-    .titel-banner p {
-        width: 450px;
-        margin-bottom: 20px;
-        font-size: 1.3em;
-        color: gray;
-    }
-
-    .titel-banner button {
-        border: none;
-        background-color: rosybrown;
-        padding: 10px 20px 10px 20px;
-        margin-top: 10px;
-    }
-
-    .titel-banner button a {
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        font-size: 1.5em;
-    }
-
-    /* Featured Products */
-    .featured {
-        all: revert;
-        margin-bottom: 50%;
-    }
-
-
-    .sub-featured {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 20px 0 20px;
-        gap: 3%;
-    }
-
-    .featured img {
-        width: 100%;
+    .product>img {
         height: auto;
-        margin-bottom: 20px;
-    }
-
-    .featured h2 {
-        font-size: 1.5em;
-        margin: 0 20px 0 20px;
-        margin-bottom: 30px;
-    }
-
-    .rabatt {
-        font-size: 1.5em;
     }
 
     .product-info {
         text-align: center;
+        font-size: 1.2em;
     }
 
-    .product-info>div {
-        font-size: 1.3em;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .rabatt {
+        font-size: 1.5em;
     }
 
-    .product-info>div>p {
-        text-align: center;
-        font-size: 1.3em;
-    }
-
-    .featured button {
-        margin-top: 20px
+    .product-info>h3 {
+        font-size: 1.4em;
     }
 
     .preis {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
-    .featured button a {
-        font-size: 1.5em;
+    .product-info>button>a {
+        font-size: 1.2em;
     }
 
-    /* zwei products */
-    .sub-zwei-products {
+    /* Zwei-Cards */
+    .sub-zwei-cards {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        padding: 0 20px 0 20px;
+        gap: 50px;
+        text-align: center;
     }
 
-    .sub-zwei-products img {
-        height: auto;
+    .card-one {
+        position: static;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .card-one>p {
+        font-size: 1.2em;
+    }
+
+    .card-two {
+        position: static;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .card-two>p {
+        font-size: 1.2em;
+    }
+
+    .card>div>button>a {
+        font-size: 1.3em;
+    }
+
+    /* About The Brand */
+    .about {
+        background-color: rgb(225, 195, 151);
+        padding: 0;
+        padding-bottom: 30px;
+    }
+
+    .sub-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sub-about>img {
+        width: 100%;
+    }
+
+    .sub-about>div>p {
+        text-align: center;
+        font-size: 1.3em;
+        margin: 0 auto;
     }
 
 
-    .hilights h3 {
-        width: 400px;
-        font-size: 1.8em;
+    .sub-about>div>p:nth-child(1) {
+        font-size: 1.3em;
+    }
+
+    /* 10% Off */
+    .sub-off>img {
+        width: 100%;
 
     }
 
-    .hilights>div>p {
-        font-size: 1.5em;
+    .sub-off {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
     }
 
-    .hilights>div>button>a {
-        font-size: 1.5em;
+    .sub-off>div {
+        width: 80%;
+        margin: 0 30px;
+        font-size: 1.2em;
+
     }
 
-    /* About-The-Brand */
-    .brand {
-        all: revert;
-        background-color: antiquewhite;
-        padding-bottom: 50px;
+    .sub-off>div>a>button {
+        font-size: 1.3em;
+
     }
 
-    .brand-about {
+    /* Services */
+    .sub-services {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
-        padding-left: 0;
     }
 
-    .brand-about h4 {
-        margin-bottom: 30px;
-        font-size: 23px;
-        text-align: center;
-        font-size: 2em;
+    .services-info {
+        font-size: 1.2em;
     }
 
-    .brand-about p {
-        text-align: center;
-        padding: 0 20px 0 20px;
-        width: 450px;
-        font-size: 1.5em;
-    }
-
-    .brand-about img {
-        width: 100%;
-
-    }
-
-    /* Mizharia */
-    .sub-mizharia {
+    /* Footer */
+    .sub-footer {
         display: flex;
         flex-direction: column;
         gap: 50px;
+        font-size: 1.2em;
     }
 
-    .sub-mizharia .para-one {
-        font-size: 1.3em;
+    /* phone */
+    .contact-us>h3 {
+        font-size: 2em;
     }
 
-    .sub-mizharia>div {
-        text-align: center;
-        padding: 0 20px 0 20px;
-        font-size: 1.3em;
+    .location>div>p {
+        font-size: 1.2em;
     }
 
-    .mizharia img {
-        width: 100%;
+    /* email */
+    .location>div>a {
+        font-size: 1.2em;
     }
 
-    .sub-mizharia button a {
+    .main-policy>h3 {
+        font-size: 2em;
+    }
+
+    .policy>a {
+        font-size: 1.2em;
+    }
+
+    .main-media>h3 {
+        font-size: 2em;
+    }
+
+    .media>a>i {
         font-size: 1.5em;
     }
 
-    /* services */
-    .sub-services {
+    .media>div>a {
+        font-size: 1.2em;
+    }
+}
+
+
+
+/********************************************** Medium mobile device (481px to 767px) **************************************/
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* header */
+    .hamburger {
+        position: sticky;
+        width: 30px;
+        height: 21px;
+        right: 30px;
+        top: 60px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        transition: all 0.5s ease;
+
+    }
+
+    .menu {
+        position: fixed;
+        right: -100%;
+        background-color: rosybrown;
+        height: 100vh;
+        width: 80%;
+        max-width: 300px;
+        top: 0;
+        padding: 100px 20px;
+        transition: all 0.5s ease;
+        z-index: 999;
+    }
+
+    .menu>ul>li {
+        margin-bottom: 30px;
+    }
+
+    .menu>ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu>ul>li>a {
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+        display: block;
+        font-size: 1.3em;
+    }
+
+    .menu-toggle:checked~.menu {
+        right: 0;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.326);
+        display: none;
+        z-index: 998;
+    }
+
+    .menu-toggle:checked~.overlay {
+        display: block;
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* main > Banner */
+    .image-banner {
+        display: none;
+    }
+
+    .mobille-image {
+        display: block;
+    }
+
+    .banner-image-titel {
+        position: static;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2em;
+        margin-top: 30px;
+
+    }
+
+    .banner-image-titel>button {
+        font-size: 1.3em;
+    }
+
+    /* Featured Products */
+    .sub-featured {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .product {
+        /* text-align: center; */
+    }
+
+    .product>img {
+        height: 220px;
+    }
+
+    .product-info {
+        /* text-align: center; */
+        font-size: 1.2em;
+    }
+
+    .rabatt {
+        font-size: 1.5em;
+    }
+
+    .product-info>h3 {
+        font-size: 1.4em;
+    }
+
+    .preis {
+        font-size: 1.4em;
+    }
+
+    .product-info>button>a {
+        font-size: 1.2em;
+    }
+
+    /* Zwei-Cards */
+    .sub-zwei-cards {
         display: flex;
         flex-direction: column;
         gap: 50px;
         justify-content: center;
+        text-align: center;
     }
 
-    .sub-services>div>div>p {
+    .card-one {
+        position: static;
+        color: black;
         text-align: center;
-        width: 400px;
+        margin-top: 10px;
+    }
+
+    .card-one>p {
+        font-size: 1.2em;
+    }
+
+    .card-two {
+        position: static;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .card-two>p {
+        font-size: 1.2em;
+    }
+
+    .card>div>button>a {
         font-size: 1.3em;
     }
 
-    .sub-services h5 {
+    /* About The Brand */
+    .about {
+        background-color: rgb(225, 195, 151);
+        padding: 0;
+        padding-bottom: 30px;
+    }
+
+    .sub-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sub-about>img {
+        width: 100%;
+    }
+
+    .sub-about>div>p {
+        text-align: center;
+        font-size: 1.3em;
+        margin: 0 auto;
+    }
+
+
+    .sub-about>div>p:nth-child(1) {
+        font-size: 1.3em;
+    }
+
+    /* 10% Off */
+    .sub-off>img {
+        width: 100%;
+
+    }
+
+    .sub-off {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .sub-off>div {
+        width: 80%;
+        margin: 0 30px;
+        font-size: 1.2em;
+
+    }
+
+    .sub-off>div>a>button {
+        font-size: 1.3em;
+
+    }
+
+    /* Services */
+    .sub-services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        align-items: center;
+    }
+
+    .services-info {
+        font-size: 1.2em;
+    }
+
+    /* Footer */
+    .sub-footer {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2em;
+    }
+
+    /* phone */
+    .contact-us>h3 {
+        font-size: 2em;
+    }
+
+    .location>div>p {
+        font-size: 1.2em;
+    }
+
+    /* email */
+    .location>div>a {
+        font-size: 1.2em;
+    }
+
+    .main-policy>h3 {
+        font-size: 2em;
+    }
+
+    .policy>a {
+        font-size: 1.2em;
+    }
+
+    .main-media>h3 {
+        font-size: 2em;
+    }
+
+    .media>a>i {
         font-size: 1.5em;
     }
 
-
-
-    /* Footer */
-    .footer {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        padding-left: 30px;
-        padding-right: 30px;
-
-        font-size: 1.7em;
-    }
-
-    .gps div p {
-        width: 300px;
-    }
-
-    .phone p {
-        font-size: 1.3em;
-
-    }
-
-    .email a {
-        font-size: 1.3em;
-    }
-
-    .Policy>div>a {
-        font-size: 1.3em;
-    }
-
-    .social i {
-        font-size: 1.3em;
-    }
-
-    .social>a {
-        font-size: 1.3em;
+    .media>div>a {
+        font-size: 1.2em;
     }
 }

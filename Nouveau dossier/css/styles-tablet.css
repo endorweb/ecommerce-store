@@ -1,0 +1,218 @@
+/**************************************************** Tablet (768px bis 1024px) *****************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    body,
+    html {
+        width: 100%;
+        overflow-x: hidden;
+        /* margin: 0 !important;
+        padding: 0 !important; */
+    }
+
+    /* Header > menu */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 50px;
+        z-index: 1000;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #333;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #333;
+        transition: all 0.3s ease;
+    }
+
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rosybrown;
+        z-index: 999;
+        transition: all 0.5s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 80px 20px 20px;
+    }
+
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu li {
+        margin-bottom: 15px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        border-bottom: 1px solid #eee;
+        font-size: 1.3em;
+    }
+
+    .menu-toggle:checked~.menu {
+        right: 0;
+
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(2) {
+        display: none;
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* banner */
+    .titel-banner {
+        position: static;
+        font-size: 1.3em;
+        padding: 0 50px 0 50px;
+    }
+
+    /* Featured Products */
+    .featured {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 100px;
+    }
+
+    .sub-featured {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 50px 0 50px;
+        gap: 3%;
+    }
+
+    .featured img {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .parfum-name {
+        font-size: 1.5em
+    }
+
+    .product-info>div {
+        font-size: 1.3em;
+    }
+
+    .preis {
+        font-size: 1.5em;
+    }
+
+    /* zwei products */
+
+    .sub-zwei-products {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        padding: 0 50px 0 50px;
+
+    }
+
+    .hilights h3 {
+        font-size: 1.8rem;
+        width: 80%;
+    }
+
+    .sub-zwei-products img {
+        height: auto;
+    }
+
+    .sub-zwei-products a {
+        font-size: 1.3rem;
+    }
+
+    /* About-The-Brand  */
+    .brand-about {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+
+    .brand-about h4 {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+    }
+
+    .brand-about>div>p {
+        width: 100%;
+        font-size: 1.3em;
+        line-height: 1.2;
+    }
+
+    /* Mizharia */
+    .sub-mizharia {
+        all: revert;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .mizharia img {
+        width: 70%;
+    }
+
+    .sub-mizharia>div {
+        margin-top: 20px;
+        padding: 0 50px 0 50px;
+        font-size: 1.3em;
+
+    }
+
+    .sub-mizharia>div>button>a {
+        font-size: 1.3em;
+    }
+
+
+    /* Services */
+
+    .sub-services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 0 50px 0 50px;
+    }
+
+    .sub-services p {
+        width: 350px;
+        font-size: 1.3em;
+    }
+}

@@ -1,83 +1,160 @@
 /**************************************************** Tablet (768px bis 1024px) *****************************************************/
 @media (min-width: 768px) and (max-width: 1023px) {
-
-    body,
-    html {
-        width: 100%;
-        overflow-x: hidden;
-        /* margin: 0 !important;
-        padding: 0 !important; */
+    .sub-featured {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
     }
 
-    /* Header > menu */
-    .hamburger {
+    .product>img {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .sub-about {
         display: flex;
+        text-align: start;
+        align-items: center;
+        gap: 50px;
+        line-height: 1.5;
+    }
+
+    .sub-about>div>p {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1150px) {
+
+    /* 10% Off */
+    .sub-off>img {
+        width: 100%;
+
+    }
+
+    .sub-off {
+        display: flex;
+        align-items: center;
         flex-direction: column;
-        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .sub-off>div {
+        width: 80%;
+        margin: 0 30px;
+        font-size: 1.2em;
+
+    }
+
+    .sub-off>div>a>button {
+        font-size: 1.3em;
+
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1150px) {
+
+    /* Services */
+    .sub-services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        align-items: center;
+    }
+
+    .services-info {
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/**************************************************** Tablet (768px bis 1024px) *****************************************************/
+@media (min-width: 768px) and (max-width: 1239px) {
+
+    /* header */
+    .hamburger {
+        position: sticky;
         width: 30px;
         height: 21px;
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        right: 50px;
+        right: 30px;
+        top: 60px;
         z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        cursor: pointer;
     }
 
     .hamburger span {
-        display: block;
         height: 3px;
         width: 100%;
-        background: #333;
-        transition: all 0.3s ease;
-    }
-
-    .hamburger span {
+        background-color: rgb(255, 255, 255);
         display: block;
-        height: 3px;
-        width: 100%;
-        background: #333;
-        transition: all 0.3s ease;
-    }
+        transition: all 0.5s ease;
 
+    }
 
     .menu {
         position: fixed;
-        top: 0;
         right: -100%;
+        background-color: rosybrown;
+        height: 100vh;
         width: 80%;
         max-width: 300px;
-        height: 100vh;
-        background-color: rosybrown;
-        z-index: 999;
+        top: 0;
+        padding: 100px 20px;
         transition: all 0.5s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        padding: 80px 20px 20px;
+        z-index: 999;
     }
 
-    .menu ul {
-        list-style: none;
+    .menu>ul>li {
+        margin-bottom: 30px;
+    }
+
+    .menu>ul {
         margin: 0;
         padding: 0;
-
-        display: flex;
-        flex-direction: column;
     }
 
-    .menu li {
-        margin-bottom: 15px;
-    }
-
-    .menu ul li a {
-        text-decoration: none;
+    .menu>ul>li>a {
+        border-bottom: 1px solid #eee;
         padding: 10px;
         display: block;
-        border-bottom: 1px solid #eee;
         font-size: 1.3em;
     }
 
     .menu-toggle:checked~.menu {
         right: 0;
+    }
 
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.326);
+        display: none;
+        z-index: 998;
+    }
+
+    .menu-toggle:checked~.overlay {
+        display: block;
     }
 
     .menu-toggle:checked+.hamburger span:nth-child(1) {
@@ -85,134 +162,48 @@
     }
 
     .menu-toggle:checked+.hamburger span:nth-child(2) {
-        display: none;
+        opacity: 0;
     }
 
     .menu-toggle:checked+.hamburger span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    /* banner */
-    .titel-banner {
+    /* main > Banner */
+    .banner {
+        /* margin-bottom: 200px; */
+    }
+
+    .banner-image-titel {
         position: static;
-        font-size: 1.3em;
-        padding: 0 50px 0 50px;
+        top: 20px;
+        width: 90%;
     }
 
-    /* Featured Products */
-    .featured {
-        padding-left: 50px;
-        padding-right: 50px;
-        margin-bottom: 100px;
+    .titel-banner {
+        position: absolute;
+        top: 30px;
     }
 
-    .sub-featured {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 0 50px 0 50px;
-        gap: 3%;
+    .para-banner {
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 70px;
+        line-height: 1.5;
+        font-size: 1.2em;
     }
 
-    .featured img {
-        width: 100%;
-        height: 250px;
-        margin-bottom: 20px;
+    .para-banner>button {
+        border: none;
     }
 
-    .parfum-name {
-        font-size: 1.5em
+    .titel-banner>h1 {
+        width: 70vw;
+        font-size: 1.8em;
     }
 
-    .product-info>div {
+    .para-banner>button>a {
         font-size: 1.3em;
     }
 
-    .preis {
-        font-size: 1.5em;
-    }
-
-    /* zwei products */
-
-    .sub-zwei-products {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        padding: 0 50px 0 50px;
-
-    }
-
-    .hilights h3 {
-        font-size: 1.8rem;
-        width: 80%;
-    }
-
-    .sub-zwei-products img {
-        height: auto;
-    }
-
-    .sub-zwei-products a {
-        font-size: 1.3rem;
-    }
-
-    /* About-The-Brand  */
-    .brand-about {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        gap: 100px;
-        padding-left: 50px;
-        padding-right: 50px;
-
-    }
-
-    .brand-about h4 {
-        font-size: 1.3em;
-        margin-bottom: 8px;
-    }
-
-    .brand-about>div>p {
-        width: 100%;
-        font-size: 1.3em;
-        line-height: 1.2;
-    }
-
-    /* Mizharia */
-    .sub-mizharia {
-        all: revert;
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: start;
-    }
-
-    .mizharia img {
-        width: 70%;
-    }
-
-    .sub-mizharia>div {
-        margin-top: 20px;
-        padding: 0 50px 0 50px;
-        font-size: 1.3em;
-
-    }
-
-    .sub-mizharia>div>button>a {
-        font-size: 1.3em;
-    }
-
-
-    /* Services */
-
-    .sub-services {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        padding: 0 50px 0 50px;
-    }
-
-    .sub-services p {
-        width: 350px;
-        font-size: 1.3em;
-    }
 }

@@ -1,38 +1,10 @@
 /* ************************************************* laptop: 1024px > 1279px ************************************************* */
-@media (min-width: 1023px) and (max-width: 1279px) {
-
-    body,
-    html {
-        width: 100%;
-        overflow-x: hidden;
-        /* يمنع ظهور شريط التمرير الأفقي */
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .sub-mizharia>div {
-        margin-top: 30px;
-    }
-}
+@media (min-width: 1023px) and (max-width: 1279px) {}
 
 /* ************************************************* 1280px > 1439px ************************************ */
-@media (min-width: 1280px) and (max-width: 1439px) {
-
-    /* Services */
-    .sub-services {
-        padding-left: 50px;
-        padding-right: 50px;
-
-    }
+@media (min-width: 1280px) and (max-width: 1439px) {}
 
 
-}
 
 /* *************************************** (Full HD):  1440px ****************************************  */
-@media (min-width: 1440px) {
-    .sub-services {
-        padding-left: 50px;
-        padding-right: 50px;
-
-    }
-}
+@media (min-width: 1440px) {}
