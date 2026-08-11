@@ -48,12 +48,11 @@
     .sub-off>div {
         width: 80%;
         margin: 0 30px;
-        font-size: 1.2em;
-
+        font-size: 1.1em;
     }
 
     .sub-off>div>a>button {
-        font-size: 1.3em;
+        font-size: 1.1em;
 
     }
 }
@@ -111,19 +110,23 @@
 
     .menu {
         position: fixed;
-        right: -100%;
+        left: -100%;
         background-color: rosybrown;
         height: 100vh;
         width: 80%;
         max-width: 300px;
         top: 0;
-        padding: 100px 20px;
+        padding: 30px 20px;
         transition: all 0.5s ease;
         z-index: 999;
     }
 
     .menu>ul>li {
         margin-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        display: block;
+        width: 100%;
+        padding: 13px 10px;
     }
 
     .menu>ul {
@@ -132,14 +135,12 @@
     }
 
     .menu>ul>li>a {
-        border-bottom: 1px solid #eee;
-        padding: 10px;
-        display: block;
-        font-size: 1.3em;
+        font-size: 1.1em;
+        margin-bottom: 22px;
     }
 
     .menu-toggle:checked~.menu {
-        right: 0;
+        left: 0;
     }
 
     .overlay {

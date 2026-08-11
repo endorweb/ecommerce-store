@@ -31,19 +31,24 @@
 
     .menu {
         position: fixed;
-        right: -100%;
+        left: -100%;
         background-color: rosybrown;
         height: 100vh;
         width: 80%;
         max-width: 300px;
         top: 0;
-        padding: 100px 20px;
+        padding: 30px 20px;
         transition: all 0.5s ease;
         z-index: 999;
     }
 
     .menu>ul>li {
         margin-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        display: block;
+        width: 100%;
+        padding: 13px 10px;
+
     }
 
     .menu>ul {
@@ -52,14 +57,13 @@
     }
 
     .menu>ul>li>a {
-        border-bottom: 1px solid #eee;
-        padding: 10px;
-        display: block;
-        font-size: 1.3em;
+        font-size: 1.1em;
+        margin-bottom: 22px;
+
     }
 
     .menu-toggle:checked~.menu {
-        right: 0;
+        left: 0;
     }
 
     .menu-toggle:checked+.hamburger span:nth-child(1) {
@@ -100,15 +104,11 @@
 
     .banner-image-titel {
         position: static;
-        text-align: center;
+        text-align: left;
         width: 100%;
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-top: 30px;
 
-    }
-
-    .banner-image-titel>button {
-        font-size: 1.3em;
     }
 
     /* Featured Products */
@@ -119,7 +119,7 @@
     }
 
     .product {
-        text-align: center;
+        background-color: rgba(225, 195, 151, 0.562);
     }
 
     .product>img {
@@ -127,12 +127,13 @@
     }
 
     .product-info {
-        text-align: center;
+        text-align: left;
         font-size: 1.2em;
+        padding: 10px 15px 20px;
     }
 
     .rabatt {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .product-info>h3 {
@@ -201,14 +202,13 @@
     }
 
     .sub-about>div>p {
-        text-align: center;
+        text-align: left;
         font-size: 1.3em;
-        margin: 0 auto;
     }
 
 
     .sub-about>div>p:nth-child(1) {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 
     /* 10% Off */
@@ -227,12 +227,12 @@
     .sub-off>div {
         width: 80%;
         margin: 0 30px;
-        font-size: 1.2em;
+        font-size: 1.1em;
 
     }
 
     .sub-off>div>a>button {
-        font-size: 1.3em;
+        font-size: 1.2em;
 
     }
 
@@ -252,41 +252,41 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     /* phone */
     .contact-us>h3 {
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     .location>div>p {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     /* email */
     .location>div>a {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .main-policy>h3 {
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     .policy>a {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .main-media>h3 {
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     .media>a>i {
-        font-size: 1.5em;
+        /* font-size: 1.5em; */
     }
 
     .media>div>a {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 
@@ -320,19 +320,23 @@
 
     .menu {
         position: fixed;
-        right: -100%;
+        left: -100%;
         background-color: rosybrown;
         height: 100vh;
         width: 80%;
         max-width: 300px;
         top: 0;
-        padding: 100px 20px;
+        padding: 30px 20px;
         transition: all 0.5s ease;
         z-index: 999;
     }
 
     .menu>ul>li {
         margin-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        display: block;
+        width: 100%;
+        padding: 13px 10px;
     }
 
     .menu>ul {
@@ -341,14 +345,14 @@
     }
 
     .menu>ul>li>a {
-        border-bottom: 1px solid #eee;
-        padding: 10px;
-        display: block;
-        font-size: 1.3em;
+        font-size: 1.1em;
+        margin-bottom: 22px;
     }
 
+
+
     .menu-toggle:checked~.menu {
-        right: 0;
+        left: 0;
     }
 
     .overlay {
@@ -389,9 +393,9 @@
 
     .banner-image-titel {
         position: static;
-        text-align: center;
+        text-align: left;
         width: 100%;
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-top: 30px;
 
     }
@@ -408,7 +412,7 @@
     }
 
     .product {
-        /* text-align: center; */
+        background-color: rgba(225, 195, 151, 0.562);
     }
 
     .product>img {
@@ -416,12 +420,13 @@
     }
 
     .product-info {
-        /* text-align: center; */
+        text-align: left;
         font-size: 1.2em;
+        padding: 10px 15px 20px;
     }
 
     .rabatt {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .product-info>h3 {
@@ -491,14 +496,8 @@
     }
 
     .sub-about>div>p {
-        text-align: center;
-        font-size: 1.3em;
-        margin: 0 auto;
-    }
-
-
-    .sub-about>div>p:nth-child(1) {
-        font-size: 1.3em;
+        text-align: left;
+        font-size: 1.1em;
     }
 
     /* 10% Off */
@@ -517,13 +516,12 @@
     .sub-off>div {
         width: 80%;
         margin: 0 30px;
-        font-size: 1.2em;
-
+        font-size: 1.1em;
+        text-align: center;
     }
 
     .sub-off>div>a>button {
-        font-size: 1.3em;
-
+        font-size: 1.1em;
     }
 
     /* Services */
@@ -535,47 +533,44 @@
     }
 
     .services-info {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        text-align: left;
     }
 
     /* Footer */
     .sub-footer {
         display: flex;
         flex-direction: column;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     /* phone */
     .contact-us>h3 {
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     .location>div>p {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     /* email */
     .location>div>a {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .main-policy>h3 {
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     .policy>a {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .main-media>h3 {
-        font-size: 2em;
-    }
-
-    .media>a>i {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .media>div>a {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
